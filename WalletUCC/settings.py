@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'user',
     'cuenta',
     'transaccion',
+    'mainApp',
 ]
 
 MIDDLEWARE = [

@@ -1,0 +1,28 @@
+{% extends "index.html" %}
+
+{% block content %}
+<h2>Listado de cuentas</h2>
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Nombre</th>
+      <th scope="col">Tipo</th>
+      <th scope="col">Saldo</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for cuenta in cuentas %}      
+      <tr>
+        <th scope="row">{{forloop.counter}}</th>
+        <td>{{cuenta.nombre}}</td>
+        <td>{{cuenta.tipo_cuenta}}</td>
+        <td>{{cuenta.saldo}}</td>
+      </tr>            
+    {% endfor %}
+  </tbody>
+</table>
+
+
+
+{% endblock content %}
